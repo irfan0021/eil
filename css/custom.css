@@ -1,0 +1,32 @@
+.d-flex {
+    display: flex;
+}
+.align-center {
+    align-items: center;
+}
+.m-t15 {
+    margin-top: 15px;
+}
+.m-b15 {
+    margin-bottom: 15px;
+}
+.btn-custom {
+    color: #fff;
+    background-color: #26247b;
+    letter-spacing: 1px;
+    padding: 8px 45px;
+    display: inline-block;
+    border: 2px solid #26247b;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+.btn-custom:hover, .btn-custom:focus {
+    color: #26247b;
+    background-color: transparent;
+    border-radius: 5px;
+    border-color: #9adbf9;
+}
+.site-title img {
+    max-width: 200px;
+}
