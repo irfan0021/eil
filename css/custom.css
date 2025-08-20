@@ -41,6 +41,7 @@
 }
 .service.section {
     background-color: #000000e3;
+    padding-bottom: 60px;
 }
 .video-bg {
   position: relative;
@@ -78,3 +79,46 @@
 .section-separator {
     background-color: #9ddcf9;
 }
+.portfolio-item {
+    text-align: center;
+}
+.portfolio-item h5 {
+    font-weight: 700;
+    color: #000;
+}
+.portfolio-wrap.section {
+    padding-bottom: 70px;
+}
+
+
+
+    .product-title {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #222;
+      margin-bottom: 10px;
+    }
+    .spec-grid {
+      margin-bottom: 30px;
+      padding: 0;
+      border-bottom: 1px solid #efefef;
+    }
+    .spec-grid li {
+        padding: 10px 20px;
+        list-style-type: none;
+
+    }
+    .spec-grid li:nth-child(odd) {
+        background-color: #efefef;
+    }
+   
+   
+    .product-section-title {
+      font-size: 1.2em;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      border-left: 4px solid #26247b;
+      padding-left: 10px;
+      color: #26247b;
+      font-weight: 600;
+    }
