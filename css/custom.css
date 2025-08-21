@@ -122,3 +122,16 @@
       color: #26247b;
       font-weight: 600;
     }
+    ul.our-vision li {
+    padding-bottom: 10px;
+}
+.google-map {
+    position: relative;
+}
+.google-map:before {
+    content: "";
+    background-color: #000000;
+    position: absolute;
+    inset: 0;
+    opacity: 0.5;
+}
