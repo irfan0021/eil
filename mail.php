@@ -1,28 +1,12 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = strip_tags(trim($_POST["name"]));
-    $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
-    $message = trim($_POST["msg"]);
 
-    if ( empty($name) || empty($message) || !filter_var($email, FILTER_VALIDATE_EMAIL) ) {
-        echo "Please fill out all fields correctly.";
-        exit;
-    }
+$to 		= 'demo@demo.com';
+$headers	= 'FROM: "'.$email.'"';
 
-    $recipient = "irfan.0021@gmail.com"; // <-- Replace with your email
-    $subject = "Contact from $name";
-    $email_content = "Name: $name\n";
-    $email_content .= "Email: $email\n\n";
-    $email_content .= "Message:\n$message\n";
+//All form values
+$name 		= $_POST['name'];
+$email 		= $_POST['email'];
+$msg 		= $_POST['msg'];
+$output 	= "Name: ".$name."\nEmail: ".$email."\n\nMessage: ".$msg;
 
-    $email_headers = "From: $name <$email>";
-
-    if (mail($recipient, $subject, $email_content, $email_headers)) {
-        echo "Thank you! Your message has been sent.";
-    } else {
-        echo "Oops! Something went wrong.";
-    }
-} else {
-    echo "Invalid request.";
-}
-?>
+$send		= mail($to, $name, $output, $headers);
