@@ -19,7 +19,7 @@ a:hover, a:focus, a:active {
 .section {
     padding: 50px 0;
 }
-.primary-nav-list .menu-item > a:hover {
+.primary-nav-list .menu-item > a:hover, .breadcrumb li a:hover {
     color: #9ddcf9;
 }
 .primary-nav-list .active > a {
@@ -121,7 +121,7 @@ a:hover, a:focus, a:active {
 
     }
     .spec-grid li:nth-child(odd) {
-        background-color: #efefef;
+        background-color: #eaf8ff;
     }
    
    
@@ -184,12 +184,10 @@ a:hover, a:focus, a:active {
 }
 
 .tagline {
-    
     display: block;
-   
     color: #f9f5f5;
     font-weight: 600;
-    font-size: 12px;
+    font-size: 9.4px;
     bottom: 0;
 }
 @media screen and (max-width: 1000px) {
