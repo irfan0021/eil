@@ -16,6 +16,9 @@ a:hover, a:focus, a:active {
 .m-b15 {
     margin-bottom: 15px;
 }
+.section-header.m-b15 {
+    margin-bottom: 15px !important;
+}
 .section {
     padding: 50px 0;
 }
@@ -41,6 +44,24 @@ a:hover, a:focus, a:active {
     background-color: transparent;
     border-radius: 5px;
     border-color: #26247b;
+}
+.head {
+    font-size: 30px;
+    font-weight: 900;
+    margin-bottom: 0;
+    position: relative;
+    padding-bottom: 10px;
+    letter-spacing: 1px;
+}
+.custom-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.custom-list li {
+    margin-bottom: 7px;
+    list-style: disc;
+    list-style-position: inside;
 }
 .site-title img {
     max-width: 240px;
@@ -182,7 +203,9 @@ a:hover, a:focus, a:active {
 .site-header.small-height {
     height: 120px;
 }
-
+.about-us {
+    margin-bottom: 0;
+}
 .tagline {
     display: block;
     color: #f9f5f5;
