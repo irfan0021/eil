@@ -229,12 +229,69 @@ a:hover, a:focus, a:active {
     .media-card h3 { font-size: 20px; margin: 12px 0 8px; }
     .media-card p.date { color: #555; font-size: 14px; }
     .read-more { color: #007BFF; font-weight: 600; text-decoration: none; }
-/* .about.section {
-    padding-bottom: 0;
-} */
-/* .about-img, .about-details {
-    margin-bottom: 0;
-} */
+
+    .arms h2 {
+            margin-bottom: 20px;
+            font-weight: 600;
+       }
+        .arms table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #f9fcff;
+        }
+        .arms table tbody {
+            border: 1px solid #d9e2ec;
+        } 
+        .arms th {
+            background: #1f2e3b;
+            color: white;
+            font-weight: 600;
+            padding: 22px 20px;
+            text-align: left;
+            border-right: 1px solid #354856;
+        }
+        .arms th:last-child {
+            border-right: none;
+        }
+        .arms td {
+            padding: 16px 20px;
+            vertical-align: top;
+            border-bottom: 1px solid #d9e2ec;
+            background-color: white;
+        }
+        .arms tr:last-child td {
+            border-bottom: none;
+        }
+        .arms .spec-category {
+            font-weight: 600;
+            color: #0e3348;
+            background-color: #e7edf3;
+            width: 180px;
+            letter-spacing: 0.2px;
+            border-right: 1px solid #cbd6e3;
+            text-transform: uppercase;
+            padding: 16px 20px;
+        }
+        .arms .ak47-col {
+            background-color: #fefefd;
+            border-right: 1px solid #d9e2ec;
+        }
+        .arms .barrett-col {
+            background-color: #fefefd;
+        }
+        
+        .arms .barrett-spec {
+            background-color: #fcfaf7;
+        }
+        .section.arms {
+            padding: 30px 0;
+        }
+        
+        @media (max-width: 800px) {
+            .arms th { padding: 16px 12px; }
+            .arms td { padding: 12px 10px; }
+            .arms .spec-category { width: 130px; }
+        }
 @media screen and (max-width: 991px) {
     .about-img {
         margin-bottom: 30px;
