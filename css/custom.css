@@ -213,8 +213,34 @@ a:hover, a:focus, a:active {
     font-size: 9.4px;
     bottom: 0;
 }
-@media screen and (max-width: 1000px) {
+.media-list { display: flex; flex-wrap: wrap; gap: 30px;}
+    .media-card { width: calc(33% - 20px); border: 1px solid #ddd; padding: 15px; border-radius: 6px; transition: 0.3s; margin: 0 auto;}
+    .media-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    .media-card img {border-radius: 4px; max-height: 188px; max-width: 100%; margin: auto; text-align: center; display: block;}
+    .media-card h3 { font-size: 20px; margin: 12px 0 8px; }
+    .media-card p.date { color: #555; font-size: 14px; }
+    .read-more { color: #007BFF; font-weight: 600; text-decoration: none; }
+.about.section {
+    padding-bottom: 0;
+}
+.about-img, .about-details {
+    margin-bottom: 0;
+}
+@media screen and (max-width: 991px) {
+    .about-img {
+        margin-bottom: 30px;
+    }
+}
+@media screen and (max-width: 991px) {
     .primary-nav-list, .small-height .primary-nav-list {
         top: 110px;
     }
+}
+@media screen and (max-width: 767px) {
+    .media-card { width: calc(50% - 20px); border: 1px solid #ddd; padding: 15px; border-radius: 6px; transition: 0.3s; margin: 0 auto;}
+}
+@media screen and (max-width: 600px) {
+    .media-card { width: calc(100% - 0px); border: 1px solid #ddd; padding: 15px; border-radius: 6px; transition: 0.3s; margin: 0 auto;}
+    .media-card img {max-height: inherit; width: 100%;}
+
 }
