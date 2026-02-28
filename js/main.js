@@ -375,4 +375,16 @@
    
 })(jQuery); // End of use strict
 
+$(document).ready(function () {
+
+  fetch('https://api.countapi.xyz/hit/irfan0021.github.io.com/visits')
+    .then(response => response.json())
+    .then(data => {
+      if (document.getElementById("visits")) {
+        document.getElementById("visits").innerText = data.value;
+      }
+    });
+
+});
+
 
