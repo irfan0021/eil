@@ -387,4 +387,34 @@ $(document).ready(function () {
 
 });
 
+$(document).ready(function () {
+
+  const music = document.getElementById("bg-music");
+  const icon = document.getElementById("music-icon");
+  let musicStarted = false;
+
+  // Safety check
+  if (!music || !icon) return;
+
+  // Start music on first click anywhere
+  document.addEventListener("click", function () {
+    if (!musicStarted) {
+      music.play();
+      icon.className = "fa-solid fa-volume-high";
+      musicStarted = true;
+    }
+  }, { once: true });
+
+  window.toggleMusic = function () {
+    if (music.paused) {
+      music.play();
+      icon.className = "fa-solid fa-volume-high";
+    } else {
+      music.pause();
+      icon.className = "fa-solid fa-volume-xmark";
+    }
+  };
+
+});
+
 
