@@ -18,7 +18,17 @@
     <link rel="stylesheet" href="css/custom.css">
     <!-- Modernizr -->
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-    
+    <style>
+        button {
+      padding: 12px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background: #ff9800;
+      color: #000;
+    }
+    </style>
   </head>
 
   <body>
@@ -66,11 +76,43 @@
     <!-- Start Team Section -->
     <section class="team section" id="team">
         <div class="container">
-            <div class="section-header text-center">
-                <h2>TEAM MEMBER</h2>
-                <span class="section-separator"></span>
+            <div class="section-header text-center" style="margin-bottom: 0 !important;">
+                <h2>Our Team</h2>
             </div>
             <div class="row">
+                 <button onclick="toggleMusic()">Play / Pause Music</button>
+
+  <!-- Background Music -->
+  <audio id="bg-music" loop>
+    <source src="img/sare-jahan.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    const music = document.getElementById("bg-music");
+    let musicStarted = false;
+
+    // Start music on first click anywhere
+    document.addEventListener("click", function () {
+      if (!musicStarted) {
+        music.play();
+        musicStarted = true;
+      }
+    });
+
+    function toggleMusic() {
+      if (music.paused) {
+        music.play();
+      } else {
+        music.pause();
+      }
+    }
+  </script>
+
+                <div class="col-md-12" style="margin-bottom: 30px;">
+                    <p>Our team is the backbone of our commitment to global security. We are a dedicated collective of engineers, strategic planners, and defense experts who strive to foster innovation and uphold the highest standards of safety for soldiers and clients worldwide.</p>
+<p>Our mission extends beyond meeting the current demands of the defense sector; we are architects of the future. By anticipating emerging challenges and leveraging cutting-edge technology, we are establishing ourselves as a leading global defense entity, ensuring those on the front lines are always a step ahead.</p>
+                </div>
                 <div class="col-sm-6 col-md-3">
                     <div class="team-member">
                         <div class="member-img">
