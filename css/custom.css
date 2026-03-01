@@ -290,6 +290,29 @@ a:hover, a:focus, a:active {
             color: #A8A8A8;
             margin: 0;
         }
+        li.menu-item.menu-item-has-children.current-menu-ancestor.current-menu-parent i {
+            display: none;
+        }
+        #music-control {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            width: 42px;
+            height: 42px;
+            border: 1px solid #aaa7ac;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            background: transparent;
+            z-index: 9999;
+        }
+
+        #music-control i {
+            font-size: 18px;
+            color: #aaa7ac;
+        }
         @media (max-width: 800px) {
             .arms th { padding: 16px 12px; }
             .arms td { padding: 12px 10px; }
@@ -300,9 +323,12 @@ a:hover, a:focus, a:active {
         margin-bottom: 30px;
     }
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1000px) {
     .primary-nav-list, .small-height .primary-nav-list {
         top: 110px;
+    }
+    #music-control {
+        right: 60px;
     }
 }
 @media screen and (max-width: 767px) {
