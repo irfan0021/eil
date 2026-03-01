@@ -16,19 +16,9 @@
     <link rel="stylesheet" href="css/plugins.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <!-- Modernizr -->
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-    <style>
-        button {
-      padding: 12px 20px;
-      font-size: 16px;
-      cursor: pointer;
-      border: none;
-      border-radius: 5px;
-      background: #ff9800;
-      color: #000;
-    }
-    </style>
   </head>
 
   <body>
@@ -60,7 +50,18 @@
                         <li class="menu-item"><a href="contact.html">CONTACT</a></li>
                     </ul>
                 </nav>
+                
+                    
+                    
+               
       </div><!-- .header-wrap -->
+      <div id="music-control" onclick="toggleMusic()">
+        <i id="music-icon" class="fa-solid fa-volume-xmark"></i>
+        </div>
+
+        <audio id="bg-music" loop>
+        <source src="img/sare-jahan.mp3" type="audio/mpeg">
+        </audio>
     </header>
     <!-- End Site Header -->
 
@@ -79,35 +80,7 @@
             <div class="section-header text-center" style="margin-bottom: 0 !important;">
                 <h2>Our Team</h2>
             </div>
-            <div class="row">
-                 <button onclick="toggleMusic()">Play / Pause Music</button>
-
-  <!-- Background Music -->
-  <audio id="bg-music" loop>
-    <source src="img/sare-jahan.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
-
-  <script>
-    const music = document.getElementById("bg-music");
-    let musicStarted = false;
-
-    // Start music on first click anywhere
-    document.addEventListener("click", function () {
-      if (!musicStarted) {
-        music.play();
-        musicStarted = true;
-      }
-    });
-
-    function toggleMusic() {
-      if (music.paused) {
-        music.play();
-      } else {
-        music.pause();
-      }
-    }
-  </script>
+            <div class="row">              
 
                 <div class="col-md-12" style="margin-bottom: 30px;">
                     <p>Our team is the backbone of our commitment to global security. We are a dedicated collective of engineers, strategic planners, and defense experts who strive to foster innovation and uphold the highest standards of safety for soldiers and clients worldwide.</p>
