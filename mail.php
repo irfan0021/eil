@@ -1,12 +1,27 @@
 <?php
 
-$to 		= 'info@eildefence.com';
-$headers	= 'FROM: "'.$email.'"';
+if(isset($_POST['submit'])){
 
-//All form values
-$name 		= $_POST['name'];
-$email 		= $_POST['email'];
-$msg 		= $_POST['msg'];
-$output 	= "Name: ".$name."\nEmail: ".$email."\n\nMessage: ".$msg;
+    $to = "info@eildefence.com";
 
-$send		= mail($to, $name, $output, $headers);
+    $name  = $_POST['name'];
+    $email = $_POST['email'];
+    $msg   = $_POST['msg'];
+
+    $subject = "Contact Form Message from ".$name;
+
+    $message = "Name: ".$name."\n";
+    $message .= "Email: ".$email."\n\n";
+    $message .= "Message:\n".$msg;
+
+    $headers = "From: ".$email."\r\n";
+    $headers .= "Reply-To: ".$email."\r\n";
+
+    if(mail($to, $subject, $message, $headers)){
+        echo "Message sent successfully.";
+    } else {
+        echo "Message sending failed.";
+    }
+
+}
+?>
