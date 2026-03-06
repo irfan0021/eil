@@ -1,27 +1,40 @@
 <?php
 
-if(isset($_POST['submit'])){
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $to = "irfan.0021@gmail.com";
 
-    $name  = $_POST['name'];
-    $email = $_POST['email'];
-    $msg   = $_POST['msg'];
+    // Get form data safely
+    $name  = htmlspecialchars(trim($_POST['name']));
+    $email = filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);
+    $msg   = htmlspecialchars(trim($_POST['msg']));
 
-    $subject = "Contact Form Message from ".$name;
+    // Validate email
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo "Please enter a valid email.";
+        exit;
+    }
 
-    $message = "Name: ".$name."\n";
-    $message .= "Email: ".$email."\n\n";
-    $message .= "Message:\n".$msg;
+    $subject = "Contact Form Message from " . $name;
 
-    $headers = "From: ".$email."\r\n";
-    $headers .= "Reply-To: ".$email."\r\n";
+    $message  = "Name: " . $name . "\n";
+    $message .= "Email: " . $email . "\n\n";
+    $message .= "Message:\n" . $msg;
 
-    if(mail($to, $subject, $message, $headers)){
+    // Email headers
+    $headers  = "From: Website Contact <no-reply@yourdomain.com>\r\n";
+    $headers .= "Reply-To: " . $email . "\r\n";
+    $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+
+    // Send mail
+    if (mail($to, $subject, $message, $headers)) {
         echo "Message sent successfully.";
     } else {
         echo "Message sending failed.";
     }
 
+} else {
+    echo "Invalid request.";
 }
+
 ?>
