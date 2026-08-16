@@ -81,7 +81,7 @@
 
         <!-- Start Hero Section -->
         <section class="other-hero"
-            style="background-image: url(img/contact-banner.jpg);">
+            style="background-image: url(img/contact-banner.jpeg);">
 
         </section>
         <!-- End Hero Section -->
@@ -127,18 +127,21 @@
                     </div><!-- .col -->
                     <div class="col-sm-8">
                         <div class="cf-msg"></div>                        
-                            <form action="mail.php" method="post" class="contact-form"></form>
+                            <div class="cf-msg"></div>
 
-                            <input type="text" placeholder="Name" name="name"
-                                required>
-                            <input type="email" placeholder="Email" name="email"
-                                required>
-                            <textarea placeholder="Message" name="msg"
-                                required></textarea>
-                            <button type="submit"
-                                class="t-btn submit-btn cont-submit btn-contact"
-                                id="submit" name="submit">Send</button>
-                        </form>
+<form action="mail.php" method="post" class="contact-form" onsubmit="return validateForm()">
+
+<input type="text" id="name" placeholder="Name" name="name" required>
+
+<input type="email" id="email" placeholder="Email" name="email" required>
+
+<textarea id="msg" placeholder="Message" name="msg" required></textarea>
+
+<button type="submit" class="t-btn submit-btn cont-submit btn-contact" name="submit">
+Send
+</button>
+
+</form>
                     </div><!-- .col -->
                 </div>
             </div>
@@ -176,24 +179,28 @@
         <script src="js/main.js"></script>
 
         <script>
-    function validateForm() {
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const msg = document.getElementById('msg').value.trim();
+            function validateForm() {
 
-      if (!name || !email || !msg) {
-        alert("Please fill in all fields.");
-        return false;
-      }
-      // Simple email format check
-      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-      if (!email.match(emailPattern)) {
-        alert("Please enter a valid email address.");
-        return false;
-      }
-      return true;
-    }
-  </script>
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const msg = document.getElementById('msg').value.trim();
+
+            if (!name || !email || !msg) {
+                alert("Please fill in all fields.");
+                return false;
+            }
+
+            // Better email validation
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            return true;
+            }
+            </script>
         <script>
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>

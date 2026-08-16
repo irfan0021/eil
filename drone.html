@@ -25,7 +25,74 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
+  
+<style>
+/* ===== UAV CONTENT REDESIGN — HEADER / BANNER / FOOTER UNCHANGED ===== */
+.uav-page{background:#fff;color:#263640}
+.uav-page .uav-section{padding:88px 0}
+.uav-page .uav-section.alt{background:#f4f8fa}
+.uav-page .uav-title{font-size:42px;line-height:1.12;color:#07131f;margin:10px 0 18px}
+.uav-page .uav-lead{font-size:17px;line-height:1.85;color:#667782;margin:0}
+.uav-page .uav-intro{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+.uav-page .uav-intro-img{border-radius:18px;overflow:hidden;box-shadow:0 18px 45px rgba(0,0,0,.12)}
+.uav-page .uav-intro-img img{display:block;width:100%;height:100%;min-height:390px;object-fit:cover}
+.uav-page .uav-checks{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:25px}
+.uav-page .uav-check{padding:15px;background:#fff;border:1px solid #dce8ed;border-radius:9px;font-size:14px;font-weight:600;color:#30434d}
+.uav-page .uav-check i{color:#2db7d3;margin-right:8px}
+.uav-page .uav-heading{text-align:center;max-width:820px;margin:0 auto 48px}
+.uav-page .uav-heading .uav-title{margin-bottom:12px}
+.uav-page .uav-products{display:grid;grid-template-columns:repeat(2,1fr);gap:25px}
+.uav-page .uav-product{background:#fff;border:1px solid #dce8ed;border-radius:16px;overflow:hidden;box-shadow:0 8px 28px rgba(6,28,40,.06);transition:.25s ease}
+.uav-page .uav-product:hover{transform:translateY(-5px);box-shadow:0 18px 42px rgba(6,28,40,.12)}
+.uav-page .uav-product-img{height:255px;overflow:hidden;background:#eef4f6}
+.uav-page .uav-product-img img{width:100%;height:100%;object-fit:cover;display:block;transition:.4s ease}
+.uav-page .uav-product:hover .uav-product-img img{transform:scale(1.04)}
+.uav-page .uav-product-body{padding:27px 28px 30px}
+.uav-page .uav-product h3{font-size:25px;color:#07131f;margin:0 0 10px}
+.uav-page .uav-product p{font-size:15px;line-height:1.75;color:#667782;margin:0 0 20px}
+.uav-page .uav-specs{display:flex;flex-wrap:wrap;gap:9px}
+.uav-page .uav-spec{background:#eef7fa;border-radius:8px;padding:10px 12px;min-width:105px}
+.uav-page .uav-spec small{display:block;font-size:9px;text-transform:uppercase;letter-spacing:1px;color:#71858e}
+.uav-page .uav-spec strong{display:block;font-size:14px;color:#07131f;margin-top:3px}
+.uav-page .uav-cargo{display:grid;grid-template-columns:.85fr 1.15fr;gap:55px;align-items:start}
+.uav-page .uav-cargo-image{position:sticky;top:25px;border-radius:18px;overflow:hidden;box-shadow:0 18px 45px rgba(0,0,0,.12)}
+.uav-page .uav-cargo-image img{width:100%;display:block}
+.uav-page .uav-copy p{font-size:15px;line-height:1.85;color:#667782;margin:0 0 17px}
+.uav-page .uav-mission-section {background:linear-gradient(135deg,#07131f,#0d2838);padding:45px 0;color:#fff}
+.uav-page .uav-mission h2{font-size:38px;color:#fff;margin:8px 0 15px}
+.uav-page .uav-mission-intro{color:#c9dbe3;line-height:1.8;max-width:800px}
+.uav-page .uav-mission-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px;margin-top:35px}
+.uav-page .uav-mission-card{border:1px solid rgba(255,255,255,.13);border-radius:14px;padding:25px;background:rgba(255,255,255,.035)}
+.uav-page .uav-mission-card h3{color:#fff;font-size:21px;margin:0 0 15px}
+.uav-page .uav-mission-card ul{margin:0 0 20px;padding-left:18px;color:#d3e1e6;line-height:1.9}
+.uav-page .uav-mission-card li{padding-left:4px}
+.uav-page .uav-stat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}
+.uav-page .uav-stat{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:9px;padding:13px}
+.uav-page .uav-stat small{display:block;color:#a9bec7;font-size:9px;text-transform:uppercase;letter-spacing:1px}
+.uav-page .uav-stat strong{display:block;color:#7ce2f0;font-size:17px;margin-top:4px}
+.uav-page .uav-capabilities{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.uav-page .uav-cap{background:#fff;border:1px solid #dce8ed;border-radius:13px;padding:25px}
+.uav-page .uav-cap i{font-size:23px;color:#176b91;margin-bottom:15px}
+.uav-page .uav-cap h3{font-size:19px;color:#07131f;margin:0 0 8px}
+.uav-page .uav-cap p{font-size:14px;line-height:1.7;color:#667782;margin:0}
+.uav-page .uav-note{margin-top:28px;padding:17px 20px;border-left:4px solid #2db7d3;background:#edf7fa;color:#526771;line-height:1.7;font-size:14px}
+@media(max-width:991px){
+ .uav-page .uav-intro,.uav-page .uav-cargo{grid-template-columns:1fr}
+ .uav-page .uav-products{grid-template-columns:1fr}
+ .uav-page .uav-capabilities{grid-template-columns:1fr 1fr}
+ .uav-page .uav-cargo-image{position:static}
+ .uav-page .uav-mission-grid {grid-template-columns:1fr}
+}
+@media(max-width:600px){
+ .uav-page .uav-section{padding:60px 0}
+ .uav-page .uav-title,.uav-page .uav-mission h2{font-size:31px}
+ .uav-page .uav-checks,.uav-page .uav-capabilities{grid-template-columns:1fr}
+ .uav-page .uav-stat-row{grid-template-columns:1fr 1fr}
+ /* .uav-page .uav-mission{padding:25px} */
+}
+</style>
+
+</head>
 
   <body>
     <!-- Start Preloader -->
@@ -76,49 +143,195 @@
     
 
      <!-- Start Hero Section -->
-    <section class="other-hero" style="background-image: url(img/drone-banner.jpg);">
+    <section class="other-hero" style="background-image: url(img/drone-banner.jpeg);">
       
     </section>
     <!-- End Hero Section -->
-    
+<div class="uav-page">
 
-    <!-- Start About Section -->
-    <section class="about section" id="about">
-        <div class="container">
-            <div class="row about-us">
-                <div class="col-md-6">
-                    <div class="about-img">
-                        <img src="img/drone-2.jpeg " alt="About">
-                    </div>
-                </div><!-- .col -->
-                <div class="col-md-6">
-                    <div class="about-details">
-                        <h3>Cargo UAV Features:</h3>
-                        <h2>EIL Arms And Ammunition Ltd was incorporated in 2025 for the manufacture of Défense Equipment.</h2>
-                        <p>The Cargo UAV is designed to carry nominal payloads with ample margin for packaging and attachments. It operates at medium altitudes, typically between 1,000 and 6,000 meters above sea level, ensuring efficient cruise performance and smooth integration within existing airspace. Featuring fixed-wing VTOL airframe options, it offers a perfect balance between endurance and runway independence. The cruise speed is optimized for fuel and energy efficiency while maintaining timely delivery, providing a practical trade-off between speed and range.</p>
-                    </div>
-                </div>
-                <div class="col-md-12">
-                  <p>The Cargo UAV is designed to carry nominal payloads with ample margin for packaging and attachments. It operates at medium altitudes, typically between 1,000 and 6,000 meters above sea level, ensuring efficient cruise performance and smooth integration within existing airspace. Featuring fixed-wing VTOL airframe options, it offers a perfect balance between endurance and runway independence. The cruise speed is optimized for fuel and energy efficiency while maintaining timely delivery, providing a practical trade-off between speed and range.</p>
-
-                  <p>Its payload bay includes modular mounting options and standardized tie-down points to accommodate diverse cargo types. A quick-release cargo door or winch system enables precise delivery or the handling of suspended loads. The UAV’s structural design ensures stability and safety even when managing uneven or shifting cargo, supported by redundant flight controls and actuators that enhance reliability.</p>
-
-                  <p>The system supports multiple propulsion options—electric, hybrid, or internal combustion engines—allowing flexibility to meet range and turnaround needs. With sufficient fuel or energy capacity, it is capable of covering mission ranges with reserves for contingencies. Advanced avionics enable autonomous waypoint navigation and dynamic re-tasking, while robust GNSS systems with multi-constellation and inertial aiding ensure navigation resilience.</p>
-
-                  <p>Safety features include detect-and-avoid or ADS-B interoperability for airspace compliance, alongside a secure, encrypted command-and-control datalink with redundant telemetry. Designed for BVLOS (Beyond Visual Line of Sight) operations, it incorporates certified ground-control procedures and remote pilot interfaces. Real-time health monitoring covers propulsion, airframe, power systems, and payload conditions, supported by environmental controls like shock mounting, vibration isolation, and temperature or humidity regulation.</p>
-
-                  <p>Cargo weight and center-of-gravity sensors provide both pre-flight and in-flight monitoring. Integrated weather sensing assists in avoiding adverse conditions such as strong winds, precipitation, or icing. The UAV also minimizes logistical footprint through modular batteries or fuel pods, field-swappable components, and maintenance-friendly access points for efficient turnaround and condition-based servicing.</p>
-
-                  <p>To ensure compliance and reliability, the platform includes certification pathways for civil aviation, BVLOS operations, and airworthiness regulations. Data recording and audit logs support flight tracking, payload custody, and incident investigation. Cybersecurity measures protect mission planning, telemetry, and payload interfaces, while interoperability with fleet management and logistics systems allows seamless scheduling, manifest control, and tracking.</p>
-
-                  <p>For safety and community integration, the Cargo UAV incorporates emergency abort and safe-landing protocols, controlled payload jettison options, and low-noise, low-emission designs suitable for populated areas. Built for scalability, it supports increased payload or range through modular platform variants and adaptable add-ons.</p>
-                </div>
-                <!-- .col -->
-            </div><!-- .row -->
-          
+<!-- UAV Overview -->
+<section class="uav-section">
+  <div class="container">
+    <div class="uav-intro">
+      <div class="uav-intro-img">
+        <img src="img/loitering-munition.jpg" alt="EIL Defence unmanned aerial vehicle">
+      </div>
+      <div>
+        <div class="blue-head">Unmanned Aerial Systems</div>
+        <h2>Eye in the Sky, Grip on the Ground</h2>
+        <p class="uav-lead">At EIL Defence, we are committed to developing next-generation Unmanned Aerial Systems (UAS) that enhance operational superiority across modern battlefields and complex mission environments.</p>
+        <p class="uav-lead" style="margin-top:16px;">Our indigenous UAV platforms are engineered to deliver intelligence, precision, endurance, and reliability, supporting the evolving requirements of defence, homeland security, and strategic operations.</p>
+        <div class="uav-checks">
+          <div class="uav-check"><i class="fa-solid fa-circle-check"></i>Intelligence</div>
+          <div class="uav-check"><i class="fa-solid fa-circle-check"></i>Precision</div>
+          <div class="uav-check"><i class="fa-solid fa-circle-check"></i>Endurance</div>
+          <div class="uav-check"><i class="fa-solid fa-circle-check"></i>Reliability</div>
         </div>
-    </section>
-    <!-- End About Section -->  
+      </div>
+    </div>
+    <div style="margin:55px auto 0;">
+      <p class="uav-lead">Our portfolio encompasses Loitering Munition UAVs, Surveillance &amp; Reconnaissance (ISR) Platforms, and Logistics Drones, each designed to operate effectively in high-altitude regions, mountainous terrain, deserts, dense forests, coastal environments, and other challenging operational theatres.</p>
+      <p class="uav-lead" style="margin-top:16px;">Built with advanced autonomous flight control systems, these platforms provide long-endurance missions, real-time situational awareness, precision navigation, and dependable performance under demanding conditions.</p>
+      <p class="uav-lead" style="margin-top:16px;">From persistent intelligence gathering and target acquisition to critical payload delivery and tactical mission support, EIL Defence UAVs are designed to meet the operational needs of modern armed forces. By integrating cutting-edge technologies in autonomous navigation, secure communications, artificial intelligence, and mission management, our aerial systems deliver scalable, mission-ready solutions that strengthen national security and operational effectiveness.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Multicopters -->
+<section class="uav-section alt">
+  <div class="container">
+    <div class="uav-heading">
+      <div class="blue-head">Product Portfolio</div>
+      <h2>Multicopters</h2>
+      <p class="uav-lead">Autonomous multicopter platforms designed for demanding missions, with different configurations for lifting capability, endurance, speed and operational flexibility.</p>
+    </div>
+
+    <div class="uav-products">
+      <article class="uav-product">
+        <div class="uav-product-img"><img src="img/dual-hexa.jpg" alt="Dual Hexa 35.5"></div>
+        <div class="uav-product-body">
+          <h3>Dual Hexa 35.5</h3>
+          <p>Designed with a dual coaxial hexa-rotor architecture, the Dual Hexa 35.5 provides superior lifting capability and long-endurance performance. Built for demanding autonomous missions, it carries heavy payloads with precision while operating on EIL's intelligent autonomous flight control platform, ensuring stability, safety, and mission success.</p>
+          <div class="uav-specs">
+            <div class="uav-spec"><small>Range</small><strong>10 km</strong></div>
+            <div class="uav-spec"><small>Endurance</small><strong>40–60 min</strong></div>
+            <div class="uav-spec"><small>Max Speed</small><strong>15 m/s</strong></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="uav-product">
+        <div class="uav-product-img"><img src="img/quad.jpg" alt="Quad 4.1"></div>
+        <div class="uav-product-body">
+          <h3>Quad 4.1</h3>
+          <p>The Quad 4.1 is an entry-level autonomous UAV designed for speed, agility, and operational efficiency. Its lightweight construction enables rapid deployment, while its compact design allows seamless navigation through dense vegetation and restricted terrain. Ideal for mapping, inspection, and reconnaissance missions, it is equipped with EIL's advanced autonomous flight control system, ensuring precision, stability, and reliable mission execution.</p>
+          <div class="uav-specs">
+            <div class="uav-spec"><small>Endurance</small><strong>30–60 min</strong></div>
+            <div class="uav-spec"><small>Max Speed</small><strong>10 m/s</strong></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="uav-product">
+        <div class="uav-product-img"><img src="img/hexa.jpg" alt="Hexa 15.5"></div>
+        <div class="uav-product-body">
+          <h3>Hexa 15.5</h3>
+          <p>The Hexa 15.5 is a versatile six-rotor autonomous UAV engineered to deliver enhanced lifting capability, flight stability, and operational redundancy. Designed for missions requiring greater payload capacity than a quadcopter while maintaining excellent range and endurance, it is ideal for surveillance, inspection, mapping, and industrial applications. Powered by EIL's advanced autonomous flight control system, it ensures reliable, precise, and efficient mission execution.</p>
+          <div class="uav-specs">
+            <div class="uav-spec"><small>Range</small><strong>10 km</strong></div>
+            <div class="uav-spec"><small>Endurance</small><strong>25–40 min</strong></div>
+            <div class="uav-spec"><small>Max Speed</small><strong>10 m/s</strong></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="uav-product">
+        <div class="uav-product-img"><img src="img/octa.jpg" alt="Octa 60.20"></div>
+        <div class="uav-product-body">
+          <h3>Octa 60.20</h3>
+          <p>The Octa 60.20 is EIL's flagship heavy-lift autonomous UAV, engineered to deliver exceptional payload capacity, endurance, and operational reliability. Featuring an eight-rotor configuration and a maximum take-off weight of 56 kg, it is purpose-built for demanding missions such as precision agriculture, bulk material distribution, logistics, and industrial operations. Powered by EIL's advanced autonomous flight control system, it ensures precise navigation, superior stability, and dependable performance in challenging environments.</p>
+          <div class="uav-specs">
+            <div class="uav-spec"><small>Range</small><strong>20 km</strong></div>
+            <div class="uav-spec"><small>Endurance</small><strong>20–40 min</strong></div>
+            <div class="uav-spec"><small>Max Speed</small><strong>15 m/s</strong></div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Existing Cargo UAV content retained from original HTML -->
+<!-- <section class="uav-section">
+  <div class="container">
+    <div class="uav-cargo">
+      <div class="uav-cargo-image"><img src="img/drone-2.jpeg" alt="Cargo UAV"></div>
+      <div class="uav-copy">
+        <div class="blue-head">Logistics Drone</div>
+        <h2>Cargo UAV Features</h2>
+        <p>EIL Arms And Ammunition Ltd was incorporated in 2025 for the manufacture of Défense Equipment.</p>
+        <p>The Cargo UAV is designed to carry nominal payloads with ample margin for packaging and attachments. It operates at medium altitudes, typically between 1,000 and 6,000 meters above sea level, ensuring efficient cruise performance and smooth integration within existing airspace. Featuring fixed-wing VTOL airframe options, it offers a perfect balance between endurance and runway independence. The cruise speed is optimized for fuel and energy efficiency while maintaining timely delivery, providing a practical trade-off between speed and range.</p>
+        <p>The Cargo UAV is designed to carry nominal payloads with ample margin for packaging and attachments. It operates at medium altitudes, typically between 1,000 and 6,000 meters above sea level, ensuring efficient cruise performance and smooth integration within existing airspace. Featuring fixed-wing VTOL airframe options, it offers a perfect balance between endurance and runway independence. The cruise speed is optimized for fuel and energy efficiency while maintaining timely delivery, providing a practical trade-off between speed and range.</p>
+        <p>Its payload bay includes modular mounting options and standardized tie-down points to accommodate diverse cargo types. A quick-release cargo door or winch system enables precise delivery or the handling of suspended loads. The UAV’s structural design ensures stability and safety even when managing uneven or shifting cargo, supported by redundant flight controls and actuators that enhance reliability.</p>
+        <p>The system supports multiple propulsion options—electric, hybrid, or internal combustion engines—allowing flexibility to meet range and turnaround needs. With sufficient fuel or energy capacity, it is capable of covering mission ranges with reserves for contingencies. Advanced avionics enable autonomous waypoint navigation and dynamic re-tasking, while robust GNSS systems with multi-constellation and inertial aiding ensure navigation resilience.</p>
+        <p>Safety features include detect-and-avoid or ADS-B interoperability for airspace compliance, alongside a secure, encrypted command-and-control datalink with redundant telemetry. Designed for BVLOS (Beyond Visual Line of Sight) operations, it incorporates certified ground-control procedures and remote pilot interfaces. Real-time health monitoring covers propulsion, airframe, power systems, and payload conditions, supported by environmental controls like shock mounting, vibration isolation, and temperature or humidity regulation.</p>
+        <p>Cargo weight and center-of-gravity sensors provide both pre-flight and in-flight monitoring. Integrated weather sensing assists in avoiding adverse conditions such as strong winds, precipitation, or icing. The UAV also minimizes logistical footprint through modular batteries or fuel pods, field-swappable components, and maintenance-friendly access points for efficient turnaround and condition-based servicing.</p>
+        <p>To ensure compliance and reliability, the platform includes certification pathways for civil aviation, BVLOS operations, and airworthiness regulations. Data recording and audit logs support flight tracking, payload custody, and incident investigation. Cybersecurity measures protect mission planning, telemetry, and payload interfaces, while interoperability with fleet management and logistics systems allows seamless scheduling, manifest control, and tracking.</p>
+        <p>For safety and community integration, the Cargo UAV incorporates emergency abort and safe-landing protocols, controlled payload jettison options, and low-noise, low-emission designs suitable for populated areas. Built for scalability, it supports increased payload or range through modular platform variants and adaptable add-ons.</p>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!-- Loitering Munition -->
+<section class="uav-mission-section alt">
+  <div class="container">
+    <div class="uav-mission">
+      <div class="blue-head" style="color:#7ce2f0;">Advanced Systems</div>
+      <h2>Loitering Munition</h2>
+      <p class="uav-mission-intro">A multi-mission UAV combining surveillance and precision strike capability.</p>
+
+      <div class="uav-mission-grid">
+        <div class="uav-mission-card">
+          <h3>Mission Profile</h3>
+          <ul>
+            <li>Surveillance &amp; target acquisition</li>
+            <li>Real-time target tracking</li>
+            <li>Laser range finding</li>
+            <li>Airborne data relay</li>
+          </ul>
+          <div class="uav-stat-row">
+            <div class="uav-stat"><small>Range</small><strong>100 km minimum</strong></div>
+            <div class="uav-stat"><small>Endurance</small><strong>4 hours</strong></div>
+            <div class="uav-stat"><small>Speed</small><strong>51–61 m/s</strong></div>
+            <div class="uav-stat"><small>Altitude</small><strong>Sea level – 9,500 m</strong></div>
+          </div>
+          <div class="uav-note">Payload: 14 kg high-explosive</div>
+        </div>
+
+        <div class="uav-mission-card">
+          <h3>Key Specifications — Second Entry</h3>
+          <p style="color:#d3e1e6;line-height:1.8;">The supplied summary contains a second Loitering Munition entry with the same mission profile and a different payload specification.</p>
+          <ul>
+            <li>Surveillance &amp; target acquisition</li>
+            <li>Real-time target tracking</li>
+            <li>Laser range finding</li>
+            <li>Airborne data relay</li>
+          </ul>
+          <div class="uav-stat-row">
+            <div class="uav-stat"><small>Range</small><strong>100 km minimum</strong></div>
+            <div class="uav-stat"><small>Endurance</small><strong>4 hours</strong></div>
+            <div class="uav-stat"><small>Payload</small><strong>10 kg high-explosive</strong></div>
+            <div class="uav-stat"><small>Altitude</small><strong>Sea level – 9,500 m</strong></div>
+          </div>
+          <div class="uav-note">Speed: 51–61 m/s (cruise)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="uav-note" style="margin-top:25px;">The system priorities operational efficiency and user-friendliness, surpassing performance, safety, and security benchmarks for various missions.</div>
+    <div class="uav-note">EIL's dedication to developing cutting-edge solutions in Advanced Systems, solidifying their commitment to innovation in the field.</div>
+  </div>
+</section>
+
+<!-- Capabilities -->
+<section class="uav-section">
+  <div class="container">
+    <div class="uav-heading">
+      <div class="blue-head">Mission Technology</div>
+      <h2>Advanced UAV Capabilities</h2>
+      <p class="uav-lead">From autonomous flight control to secure communications and mission management, the supplied content highlights technologies intended to strengthen operational effectiveness.</p>
+    </div>
+    <div class="uav-capabilities">
+      <div class="uav-cap"><i class="fa-solid fa-route"></i><h3>Autonomous Navigation</h3><p>Autonomous navigation and precision flight control for dependable mission execution.</p></div>
+      <div class="uav-cap"><i class="fa-solid fa-tower-broadcast"></i><h3>Secure Communications</h3><p>Secure communications designed to support mission connectivity and operational coordination.</p></div>
+      <div class="uav-cap"><i class="fa-solid fa-brain"></i><h3>Artificial Intelligence</h3><p>AI technologies integrated into the wider mission-management approach.</p></div>
+      <div class="uav-cap"><i class="fa-solid fa-crosshairs"></i><h3>Mission Management</h3><p>Mission management capabilities supporting scalable, mission-ready aerial systems.</p></div>
+    </div>
+  </div>
+</section>
+
+</div>
 
     <!-- Start Footer -->
     <footer class="site-footer black-bg">

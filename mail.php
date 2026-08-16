@@ -2,7 +2,7 @@
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $to = "irfan.0021@gmail.com";
+    $to = "info@eildefence.com";
 
     // Get form data safely
     $name  = htmlspecialchars(trim($_POST['name']));
@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message .= "Message:\n" . $msg;
 
     // Email headers
-    $headers  = "From: Website Contact <no-reply@yourdomain.com>\r\n";
+    $headers  = "From: Website Contact <no-reply@eil.com>\r\n";
     $headers .= "Reply-To: " . $email . "\r\n";
     $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
