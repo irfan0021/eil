@@ -351,10 +351,10 @@ h6 {
 }
 p {
     margin-bottom: 12px;
-    font-size: 14px;
-    color: #4c4c4c;
+
+    /* color: #4c4c4c;
     line-height: 25px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif; */
 }
 ul {
     margin: 0 0 15px 0;
@@ -365,9 +365,7 @@ ol {
     padding-left: 15px;
     margin-bottom: 15px;
 }
-li {
-    font-size: 14px;
-}
+
 dfn, cite, em, i {
     font-style: italic;
 }
