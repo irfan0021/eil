@@ -415,7 +415,7 @@ ul.our-vision li {
 .eil-home-modern .hm-drone-list li:before{content:"✓";color:#176b91;font-weight:800;margin-right:7px; position: absolute; left: 0px;}
 .eil-home-modern .hm-team{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .eil-home-modern .hm-person{background:#fff;border:1px solid #dce8ed;border-radius:15px;overflow:hidden;text-align:center}
-.eil-home-modern .hm-person img{width:100%;height:280px;object-fit:cover;display:block}
+.eil-home-modern .hm-person img{width:100%;object-fit:cover;display:block}
 .eil-home-modern .hm-person-body{padding:18px 12px 22px}
 .eil-home-modern .hm-person h3{font-size:16px;color:#07131f;margin:0 0 5px}
 .eil-home-modern .hm-person span{font-size:15px;color:#176b91;font-weight:700}
