@@ -419,7 +419,7 @@ ul.our-vision li {
 .eil-home-modern .hm-person-body{padding:18px 12px 22px}
 .eil-home-modern .hm-person h3{font-size:16px;color:#07131f;margin:0 0 5px}
 .eil-home-modern .hm-person span{font-size:15px;color:#176b91;font-weight:700}
-.eil-home-modern .hm-contact{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:stretch}
+.eil-home-modern .hm-contact{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:stretch}
 .eil-home-modern .hm-contact-info{background:#07131f;color:#fff;border-radius:18px;padding:35px}
 .eil-home-modern .hm-contact-info h3{color:#fff;margin:0 0 20px}
 .eil-home-modern .hm-info{padding:13px 0;border-bottom:1px solid rgba(255,255,255,.12)}
@@ -932,6 +932,15 @@ li.menu-item.menu-item-has-children.current-menu-ancestor.current-menu-parent i 
 }
 .single-info {
     padding-left: 25px;
+}
+input, select, textarea {
+    font-size: 14px;
+    padding: 10px 15px;
+}
+.submit-btn {
+    font-size: 16px;
+    padding: 15px 32px;
+    font-family: 'Open Sans', sans-serif;
 }
 @media(max-width:991px) {
 
