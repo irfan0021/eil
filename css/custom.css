@@ -694,6 +694,7 @@ li.menu-item.menu-item-has-children.current-menu-ancestor.current-menu-parent i 
 .single-info a {
     line-height: 25px;
     font-size: 16px;
+    vertical-align: middle;
 }
 
 .member-details h3 {
